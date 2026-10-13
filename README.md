@@ -27,3 +27,5 @@ conda activate --> cambiare environment
 
 
 
+
+
