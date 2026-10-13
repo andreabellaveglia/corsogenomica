@@ -26,6 +26,6 @@ cd --> change directory
 conda activate --> cambiare environment
 
 
-
+per entrare nella screen --> tmux a -t nome della screen (la mia si chiama general)
 
 
