@@ -3,8 +3,11 @@
 #per spostare file dalla repository locale a quella online usiamo i comandi:
 
 git add --> per aggiungere quei file tra quelli da spostare
+
 git status --> controllare i file rossi e verdi (locali e non)
+
 git commit "contenuto del commit" --> per committare le modifiche e confermarle
+
 git push --> spinge i file nella repository online
 
 git log --> registro dei commit
