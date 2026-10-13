@@ -1,6 +1,6 @@
 # corsogenomica
 
-##per spostare file dalla repository locale a quella online usiamo i comandi:
+## per spostare file dalla repository locale a quella online usiamo i comandi:
 
 git add --> per aggiungere quei file tra quelli da spostare
 
