@@ -13,6 +13,8 @@ git push --> spinge i file nella repository online
 git log --> registro dei commit
 
 
+
+
 #per l'accesso al server --> ssh STUDENTI^andrea.bellaveglia@137.204.142.242
 
 ls --> lista dei file
