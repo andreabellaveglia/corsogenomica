@@ -1,4 +1,4 @@
-# comandi
+# Kmer based Genome survey
 
 kat hist -t <THREADS> -m <MER LENGTH> -o <OUTPUT PREFIX> <paired_1> <paired_2> 
 
