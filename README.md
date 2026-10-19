@@ -16,7 +16,7 @@
 
 
 ### per l'accesso al server
---> ssh STUDENTI^andrea.bellaveglia@137.204.142.242
+--> `ssh STUDENTI^andrea.bellaveglia@137.204.142.242`
 
 * _ls_ --> lista dei file
 
