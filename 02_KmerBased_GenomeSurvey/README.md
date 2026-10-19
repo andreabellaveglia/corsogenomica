@@ -19,10 +19,10 @@ se l'output di un comando fosse troppo lungo da leggere si può usare ctrl A e a
 
 `wtdbg2 -x rs -g <EXPECTED_GENOMESIZE> -t <NUMBERS_OF_CORES> -i <FASTQ> -fo <OUT_PREFIX> #Default parameters` 
 - '-x' #define the sequecing method. rs means PacBio RSII and sets some default parameters (listed in the program's help page).
-- '-g' #the expected genome size inferred using GenomeScope
-- '-t' #number of cores to parallelise the process
-- '-i' #require the long-read file, which can be compressed
-- '-fo' #the prefix of our output
+- '-g' #the expected genome size inferred using GenomeScope (grandezza del genoma che ci aspettiamo stimata da Genome Scope) 
+- '-t' #number of cores to parallelise the process (9)
+- '-i' #require the long-read file, which can be compressed (il file contenente le reads, che peschiamo dalla repository di Mirko creando un link) 
+- '-fo' #the prefix of our output (abbiamo usato Anoste_raw)
 
 Con questo comando abbiamo creato il layout, ovvero sovrapposto le reads.
 
