@@ -2,15 +2,15 @@
 
 ### per spostare file dalla repository locale a quella online usiamo i comandi:
 
-* git add --> per aggiungere quei file tra quelli da spostare
+* _git add_ --> per aggiungere quei file tra quelli da spostare
 
-* git status --> controllare i file rossi e verdi (locali e non)
+* _git status_ --> controllare i file rossi e verdi (locali e non)
 
-* git commit "contenuto del commit" --> per committare le modifiche e confermarle
+* _git commit_ "contenuto del commit" --> per committare le modifiche e confermarle
 
-* git push --> spinge i file nella repository online
+* _git push_ --> spinge i file nella repository online
 
-* git log --> registro dei commit
+* _git log_ --> registro dei commit
 
 
 
@@ -18,15 +18,15 @@
 ### per l'accesso al server
 --> ssh STUDENTI^andrea.bellaveglia@137.204.142.242
 
-* ls --> lista dei file
+* _ls_ --> lista dei file
 
-* ll --> lista completa di dati riguardanti e caratteristiche dei file
+* _ll_ --> lista completa di dati riguardanti e caratteristiche dei file
 
-* cd --> change directory
+* _cd_ --> change directory
 
-* conda activate --> cambiare environment
+* _conda activate_ --> cambiare environment
 
-* per entrare nella screen --> tmux a -t nome della screen (la mia si chiama general)
+* per entrare nella _screen_ --> tmux a -t nome della screen (la mia si chiama general)
 
 
 
