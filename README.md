@@ -28,5 +28,5 @@
 
 * per entrare nella _screen_ --> tmux a -t nome della screen (la mia si chiama general)
 
-
+---
 
