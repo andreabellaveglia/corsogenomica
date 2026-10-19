@@ -27,6 +27,7 @@
 * _conda activate_ --> cambiare environment
 
 * per entrare nella _screen_ --> tmux a -t nome della screen (la mia si chiama general)
+* per creare una nuova _screen_ --> tmux new -s
 
 ---
 
