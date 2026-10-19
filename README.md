@@ -23,11 +23,15 @@
 * _ll_ --> lista completa di dati riguardanti e caratteristiche dei file
 
 * _cd_ --> change directory
+* cd .. permette di uscire da una cartella
+* mkdir <nome_cartella>/ permette di creare una nuova cartella
 
 * _conda activate_ --> cambiare environment
 
 * per entrare nella _screen_ --> tmux a -t nome della screen (la mia si chiama general)
 * per creare una nuova _screen_ --> tmux new -s
+
+* ln -s permette di creare un link e per fare in modo che venga creato nella cartella desiderata bisogna mettere in fondo un punto.
 
 ---
 
