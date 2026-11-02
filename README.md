@@ -24,7 +24,7 @@
 
 * _cd_ --> change directory
 * cd .. permette di uscire da una cartella
-* mkdir <nome_cartella>/ permette di creare una nuova cartella
+* _mkdir_ <nome_cartella>/ permette di creare una nuova cartella
 
 * _conda activate_ --> cambiare environment
 
@@ -33,5 +33,6 @@
 
 * ln -s permette di creare un link e per fare in modo che venga creato nella cartella desiderata bisogna mettere in fondo un punto.
 
+* _mv_ <nome_file> <nuovo_nome> --> permette di cambiare nome di un file, mv può essere usato anche per spostare file da una directory all'altra
 ---
 
