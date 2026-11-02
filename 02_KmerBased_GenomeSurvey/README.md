@@ -37,19 +37,22 @@ Con questo comando creiamo il consensus.
 I contig così creati possono essere poi controllati sia quantitativamente (la loro lunghezza) tramite un valore detto N50, sia qualitativamente con un indice detto BUSCO (che confrontando il genoma che stiamo assemblando con altri genomi già caricati nei database di riferimento riesce a riconoscere e a contare il numero di geni ortologhi identificati dal nostro assemblamento). 
 
 Innanzitutto partiamo col lanciare BUSCO:
+
 `export NUMEXPR_MAX_THREADS=<CPU_number>` --> con questo comando forniamo al programma il numero di processori a disposizione.
 
 Fatto ciò possiamo lanciare il comando vero e proprio:
 `busco -m <MODE> -l <LINEAGE> -c <CPU_NUMBER> -o <OUTPUT_NAME> -i <INPUT>`
 
 - '-m' # define whether we are using genomes or proteomes
-                        There are three valid modes:
-                        - geno or genome, for genome assemblies (DNA)
-                        - tran or transcriptome, for transcriptome assemblies (DNA)
-                        - prot or proteins, for annotated gene sets (protein)
+
+  There are three valid modes:
+     - geno or genome, for genome assemblies (DNA)
+     - tran or transcriptome, for transcriptome assemblies (DNA)
+     - prot or proteins, for annotated gene sets (protein)
 
 - '-l' # redirect to the link of the library of reference
-                         Specify the name of the BUSCO lineage to be used.
+
+     Specify the name of the BUSCO lineage to be used.
 
 - '-c' # the number of cores to parallelise the process
 - '-o' # name of the output **folder**
