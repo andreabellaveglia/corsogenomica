@@ -31,3 +31,19 @@ Il primo passo per l'assemblaggio di un genoma è la creazione dei contig, che a
 `wtpoa-cns -t <NUMBER_OF_CORES> -i <LAYOUT_FILE-.ctg.lay.gz> -fo <OUT_PREFIX>`
 
 Con questo comando creiamo il consensus. 
+
+
+I contig così creati possono essere poi controllati sia quantitativamente (la loro lunghezza) tramite un valore detto N50, sia qualitativamente con un indice detto BUSCO (che confrontando il genoma che stiamo assemblando con altri genomi già caricati nei database di riferimento riesce a riconoscere e a contare il numero di geni ortologhi identificati dal nostro assemblamento). 
+
+
+
+
+
+
+
+
+
+
+
+
+
