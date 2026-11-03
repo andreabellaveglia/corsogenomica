@@ -54,12 +54,13 @@ Lanciando il programma abbiamo ottenuto questi risultati riguardo il genoma in s
 Da questi dati emerge che nel nostro assemblaggio sono contenuti il 96% dei geni che ci si aspetta per quella specie. 
 
 Assembly Statistics:
-	* 848	Number of scaffolds
-	* 848	Number of contigs
-	* 224105378	Total length
-	* 0.000%	Percent gaps
-	* 20 Mbp	Scaffold N50
-	* 20 Mbp	Contigs N50
+
+	- 848	Number of scaffolds
+	- 848	Number of contigs
+	- 224105378	Total length
+	- 0.000%	Percent gaps
+	- 20 Mbp	Scaffold N50
+	- 20 Mbp	Contigs N50
   
 Questo dato indica che il genoma è contenuto in contig di dimensione di almeno 20 Mpb, ovvero è molto contiguo e qualitativamente buono. nelle prime due righe il numero di scaffolds è uguale a quello dei contig perchè non abbiamo ancora effettuato lo scaffolding ed infatti non sono presenti gap. 
 
