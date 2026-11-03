@@ -101,8 +101,9 @@ Nella parte iniziale abbiamo specificato delle variabili con il simbolo $ per sp
 
 Adesso per lanciare lo script basta solo usare il comando _bash_ <nome_script> seguito dai valori delle variabili che abbiamo scelto nell'orine in cui le abbiamo ordinate.
 
-
-`bash mapping.sh 8 Anoste_raw.fasta SRR11672503_1_paired.fastq SRR11672503_2_paired.fastq Anoste_pol SRR11672506.fastq.gz`
+`
+bash mapping.sh 8 Anoste_raw.fasta SRR11672503_1_paired.fastq SRR11672503_2_paired.fastq Anoste_pol SRR11672506.fastq.gz
+`
 
 
 
