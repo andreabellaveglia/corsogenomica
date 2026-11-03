@@ -36,8 +36,10 @@
 * _mv_ <nome_file> <nuovo_nome> --> permette di cambiare nome di un file, mv può essere usato anche per spostare file da una directory all'altra
 
 * _cat_ --> ci permette di stampare in standard output il contenuto di un file
+
 ---
 
+Per creare una nuova screen premere Ctrl+A e poi C, per muoversi poi tra le screen si può usare Ctrl+A e poi N (next) o P (previous).
 
 
 
