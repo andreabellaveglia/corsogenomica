@@ -6,7 +6,7 @@
 
 * _git status_ --> controllare i file rossi e verdi (locali e non)
 
-* _git commit_ "contenuto del commit" --> per committare le modifiche e confermarle
+* _git commit_ -m  "contenuto del commit" --> per committare le modifiche e confermarle
 
 * _git push_ --> spinge i file nella repository online
 
