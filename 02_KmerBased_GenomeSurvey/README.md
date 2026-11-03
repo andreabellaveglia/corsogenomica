@@ -67,7 +67,7 @@ Fatto ciò possiamo lanciare il comando vero e proprio:
 Il prerequisito per il programma che andremo ad utilizzare per il polishing in questo caso (hypo) è il mapping, ovvero lanciamo un BLAST per trovare le corrispondenze tra l'assembly e le reads. Per farlo usiamo uno script ovvero un pacchetto di comandi che il computer lancerà in maniera sequenziale permettendoci di risparmiare tempo facendo runnare i comandi uno dopo l'altro senza la necessità del nostro intervento.  
 
 
-# Mapping short and long reads on assembly
+### Mapping short and long reads on assembly
 
 Per scrivere lo script creiamo un file nel text editor con il comando:
 
