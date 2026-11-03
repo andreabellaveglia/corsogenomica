@@ -45,6 +45,12 @@ Fatto ciò possiamo lanciare il comando vero e proprio:
 
 `busco -m geno -l $BUSCO/diptera_odb12 -c 8 -o Anoste-raw -i Anoste_raw.fasta`
 
+Lanciando il programma abbiamo ottenuto questi risultati riguardo il genoma in studio: 
+( C:96.0%[S:95.2%,D:0.7%],F:0.6%,M:3.5%,n:5067,E:7.0%	) 
+
+c= complete s=single d=doubled f=fragmented 
+
+questo dato indica che il genoma è contenuto in contig di dimensione di almeno 20 Mpb, ovvero è molto contiguo e qualitativamente buono. 
 
 
 ## Genome polishing with long and shot reads 
