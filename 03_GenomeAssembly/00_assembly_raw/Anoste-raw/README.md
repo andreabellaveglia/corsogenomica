@@ -126,19 +126,19 @@ bash mapping.sh 8 Anoste_raw.fasta SRR11672503_1_paired.fastq SRR11672503_2_pair
 __(inserisci qui lezione mancante)__
 
 
-`
+```
 blobtools view -i <JSON_FILE> -o <OUTPUT_PREFIX>
 blobtools plot -i <JSON_FILE> -o <OUTPUT_PREFIX>
-`
+```
 
 Con questi comandi abbiamo generato vari file tra cui un file tabulare, i cui dati vogliamo filtrare attraverso il comando _grep_ che ci permette di imporre un pattern alle righe selezionate. La sintassi di _grep_ impone di usare le virgolette per specificare il pattern da identificare seguito dal nome del file. Usando -v prima delle virgolette il pattern viene invertito, ovvero invece di visualizzare solo le righe che rispecchiano il pattern visualizza solo quelle che non lo presentano. 
 
 _awk_ invece è un comando gestore di colonne (grep gestisce le righe). 
 
-`
+```
 awk '{ if ((NR>1)&&($0~/^>/)) { printf("\n%s", $0); } else if (NR==1) { printf("%s", $0); } else { printf("\t%s", $0); } }' in.fa | grep -w -v -Ff patterns.txt - | tr "\t" "\n" > out.fa
 #The first part ensures the FASTA is in one-line form and reformats the file, obtaining">header\tsequence". This makes it easier to process the file with grep. Then it filters out everything in the patterns file, outputting a one-line FASTA file with only the desired contigs.
-`
+```
 
 Con questo comando è possibile trasformare un normale file .fasta da una forma in cui all'header segue la sequenza in una forma il cui l'header e la sequenza si trovano sulla stessa riga, in modo tale che l'output di questo comando sia gestibile con grep che ragiona a righe e non colonne. 
 
@@ -148,20 +148,9 @@ grep -v '^#' Anoste.Anoste_blob.blobDB.table.txt | head
 
 Abbiamo eliminato ogni riga che iniziava con # (il simbolo ^ indica che vogliamo che la riga inizi con ciò che mettiamo dopo e con -v lo invertiamo)
 
-`
+```
 grep -v '^#' Anoste.Anoste_blob.blobDB.table.txt | awk '$6 != "Arthropoda"' | head
-
-ctg7    5396928 0.5963  0       330.4976        Pseudomonadota  9244600.0       0
-ctg35   117923  0.5386  0       230.8408        Pseudomonadota  552728.0        0
-ctg44   42160   0.2546  0       161.5963        no-hit  0.0     0
-ctg68   35262   0.2594  0       113.9644        no-hit  0.0     0
-ctg78   24533   0.2588  0       333.5382        no-hit  0.0     0
-ctg85   51178   0.6021  0       13.761  Pseudomonadota  53955.0 0
-ctg87   50634   0.6058  0       15.7219 Pseudomonadota  27411.0 0
-ctg93   37196   0.2532  0       12.241  no-hit  0.0     0
-ctg97   47170   0.6013  0       15.3221 Pseudomonadota  21318.0 0
-ctg98   67715   0.3573  0       5.4709  Bacteroidota    630171.0        0
-`
+```
 
 Lista dei contig non appartenenti ad Arthropoda. Aggiungendo {print $1} stampiamo solo i nomi degli headers. 
 
