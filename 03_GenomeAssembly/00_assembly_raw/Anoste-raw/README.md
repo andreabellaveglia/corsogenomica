@@ -124,9 +124,10 @@ bash mapping.sh 8 Anoste_raw.fasta SRR11672503_1_paired.fastq SRR11672503_2_pair
 `
 
 
-
-
-
+`
+blobtools view -i <JSON_FILE> -o <OUTPUT_PREFIX>
+blobtools plot -i <JSON_FILE> -o <OUTPUT_PREFIX>
+`
 
 
 
