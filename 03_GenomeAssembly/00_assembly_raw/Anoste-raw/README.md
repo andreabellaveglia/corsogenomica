@@ -172,7 +172,7 @@ grep -v '^#' Anoste.Anoste_blob.blobDB.table.txt | awk '$6 != "Arthropoda" {prin
 Con il > reindirizziamo l'output del comando all'interno di un file che denominiamo contaminants_contigs.txt 
 
 
-
+Il genoma da noi costruito è stato così pulito dalle impurità e possiamo procedere con lo scaffolding. 
 
 
 
