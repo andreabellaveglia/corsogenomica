@@ -45,6 +45,24 @@ Fatto ciò possiamo lanciare il comando vero e proprio:
 
 `busco -m geno -l $BUSCO/diptera_odb12 -c 8 -o Anoste-raw -i Anoste_raw.fasta`
 
+Lanciando il programma abbiamo ottenuto questi risultati riguardo il genoma in studio: 
+
+( **C:96.0%**[S:95.2%,D:0.7%],F:0.6%,M:3.5%,n:5067,E:7.0%	) 
+
+**C**= complete **S**=single **D**=doubled **F**=fragmented 
+
+Da questi dati emerge che nel nostro assemblaggio sono contenuti il 96% dei geni che ci si aspetta per quella specie. 
+
+Assembly Statistics:
+
+	 848	Number of scaffolds
+	 848	Number of contigs
+	 224105378	Total length
+	 0.000%	Percent gaps
+	 20 Mbp	Scaffold N50
+	 20 Mbp	Contigs N50
+  
+Questo dato indica che il genoma è contenuto in contig di dimensione di almeno 20 Mpb, ovvero è molto contiguo e qualitativamente buono. nelle prime due righe il numero di scaffolds è uguale a quello dei contig perchè non abbiamo ancora effettuato lo scaffolding ed infatti non sono presenti gap. 
 
 
 ## Genome polishing with long and shot reads 
@@ -101,13 +119,15 @@ Nella parte iniziale abbiamo specificato delle variabili con il simbolo $ per sp
 
 Adesso per lanciare lo script basta solo usare il comando _bash_ <nome_script> seguito dai valori delle variabili che abbiamo scelto nell'orine in cui le abbiamo ordinate.
 
-
-`bash mapping.sh 8 Anoste_raw.fasta SRR11672503_1_paired.fastq SRR11672503_2_paired.fastq Anoste_pol SRR11672506.fastq.gz`
-
-
-
+`
+bash mapping.sh 8 Anoste_raw.fasta SRR11672503_1_paired.fastq SRR11672503_2_paired.fastq Anoste_pol SRR11672506.fastq.gz
+`
 
 
+`
+blobtools view -i <JSON_FILE> -o <OUTPUT_PREFIX>
+blobtools plot -i <JSON_FILE> -o <OUTPUT_PREFIX>
+`
 
 
 
