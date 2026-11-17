@@ -123,7 +123,7 @@ Adesso per lanciare lo script basta solo usare il comando _bash_ <nome_script> s
 bash mapping.sh 8 Anoste_raw.fasta SRR11672503_1_paired.fastq SRR11672503_2_paired.fastq Anoste_pol SRR11672506.fastq.gz
 `
 
-__(inserisci qui lezione mancante)__
+__(inserisci qui lezione mancante 9 10 ottobre)__
 
 
 ```
