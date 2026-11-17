@@ -161,7 +161,24 @@ grep -v '^#' Anoste.Anoste_blob.blobDB.table.txt | awk '$6 != "Arthropoda" {prin
 Con il > reindirizziamo l'output del comando all'interno di un file che denominiamo contaminants_contigs.txt 
 
 
-Il genoma da noi costruito è stato così pulito dalle impurità e possiamo procedere con lo scaffolding. 
+Il genoma da noi costruito è stato così pulito dalle impurità e possiamo procedere con lo scaffolding. Prima facciamo un correzione degli errori con un genoma di riferimento grazie a questo comando:
+
+```
+ragtag.py correct -t 20 <REFERENCE_GENOME> <DRAFT_GENOME>
+
+ragtag.py correct -t 20 GCF_013141755.1_UCI_ANSTEP_V1.0_genomic.fna Anoste_pol.fasta
+```
+
+Dopodiché possiamo procedere allo scaffolding vero e proprio, ovvero l'organizzazione e l'eventuale riorientamento dei contig grazie al loro allineamento ai cromosomi del genoma di riferimento. 
+
+```
+ragtag.py scaffold -C -t 20 -o <OUTPUT_DIR> <REFERENCE_GENOME> <CORRECTED_DRAFTGENOME>
+
+ragtag.py scaffold -C -t 20 -o Anoste_chr GCF_013141755.1_UCI_ANSTEP_V1.0_genomic.fna ragtag_output/ragtag.correct.fasta
+```
+
+
+
 
 
 
