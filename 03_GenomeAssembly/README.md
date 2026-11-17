@@ -179,6 +179,20 @@ ragtag.py scaffold -C -t 20 -o Anoste_chr GCF_013141755.1_UCI_ANSTEP_V1.0_genomi
 
 
 
+Il file dello scaffolding che abbiamo ottenuto contiene dei cromosomi fittizi che non desideriamo e dunque prima visualizziamo gli header delle nostre sequenze per vedere quali siano quelli di nostro interesse: 
+
+`grep ">" ragtag.scaffold.fasta | head `
+
+creiamo un file di testo con i nomi dei primi tre headers 
+
+`nano chromosomes.txt`
+
+e infine creiamo un file filtrando col comando grep solo gli header presenti nel file di testo e la riga successiva che contiene la sequenza per struttura intrinseca del file fasta. 
+
+`grep -A1 -Ff chromosomes.txt ragtag.scaffold.fasta > ../Anoste_chr.fasta`
+
+
+
 
 
 
