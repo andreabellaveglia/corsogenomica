@@ -199,6 +199,15 @@ fold -w <n_characters> <input.fasta> > <output.fasta> --> permette di andare a c
 busco -m <MODE> -l <LINEAGE> -c <CPU_NUMBER> -o <OUTPUT_NAME> -i <INPUT> 
 ```
 
+```
+export NUMEXPR_MAX_THREADS=9
+fold -w 80 Anoste_chr.fasta  > Anoste_chr_fold.fasta
+busco -m geno -l $BUSCO/diptera_odb12 -c 9 -o Anoste_chr_busco -i Anoste_chr_fold.fasta
+```
+
+
+
+
 
 
 
