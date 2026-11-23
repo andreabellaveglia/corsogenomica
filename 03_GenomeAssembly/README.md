@@ -191,7 +191,13 @@ e infine creiamo un file filtrando col comando grep solo gli header presenti nel
 
 `grep -A1 -Ff chromosomes.txt ragtag.scaffold.fasta > ../Anoste_chr.fasta`
 
+---
 
+```
+export NUMEXPR_MAX_THREADS=<CPU_NUMBER> --> comando che permette di assegnare alla variabile NUMEXPR_MAX_THREADS in numero di CPU da usare così che busco possa richiamarlo
+fold -w <n_characters> <input.fasta> > <output.fasta> --> permette di andare a capo dopo un numero selezionato di caratteri (-w <n_characters>)
+busco -m <MODE> -l <LINEAGE> -c <CPU_NUMBER> -o <OUTPUT_NAME> -i <INPUT> 
+```
 
 
 
