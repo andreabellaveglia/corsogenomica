@@ -42,6 +42,26 @@
 Per creare una nuova screen premere Ctrl+A e poi C, per muoversi poi tra le screen si può usare Ctrl+A e poi N (next) o P (previous).
 
 
+#Genome Annotation 
+
+L'annotazione è un processo ciclico diviso in diversi round durante i quali avvengono annotazioni cicliche del genoma. Il programma che usiamo per l'annotazione è Maker. 
+Per iniziare è necessario modificare le opzioni (i control file) del programma per adattarlo alle nostre necessità. 
+
+Con il comando maker -CTL creiamo i ctl file. Quello di nostro interesse è maker_opts.ctl. 
+
+Three files are generated:
+
+*maker_bopts: parameters for the software used by MAKER; we maintain default parameters. Here, a great source to understand each input parameter in MAKER.
+*maker_exe: paths to all softwares
+*maker_opts: MAKER run parameters; here we need to modify
+
+Con nano possiamo modificare lo script inserendo il genoma da annotare, i proteomi di organismi vicni filogeneticamente a quello da noi in studio per creare un pool
+di proteine con il quale il programma possa fare matchmaking rispetto al genoma che gli  abbiamo fornito e fornire una library che permetta di mascherare il materiale 
+ripetuto. Dopodichè possiamo personalizzare il comportamento del programma dandogli indicazioni sui tipi di predizioni che deve fare (protein2genome nel nostro caso 
+nel primo round), in numero di CPU che mettiamo a disposizione nonché fornito le informazioni riguardo le thrashold di ricerca delle proteine (minimo numero di amminoacidi 
+per riconoscere una proteina come tale, permettere l'alternative splicing ecc..). 
+
+
 
 
 
