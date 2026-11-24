@@ -62,12 +62,45 @@ nel primo round), in numero di CPU che mettiamo a disposizione nonché fornito l
 per riconoscere una proteina come tale, permettere l'alternative splicing ecc..). 
 
 
-GCF_016920785.2  Ixodes scapularis  Ixosca
-GCF_982258835.1  Parasteatoda tepidariorum  Partep
-GCF_031307605.1  Tribolium castaneum   Tricas
-GCF_000001215.4  Drosophila melanogaster  Dromel
-GCF_013141755.1  Anopheles stephensi   Anoste
-GCA_002082055.1  Hypsibius exemplaris  Hypexe
+Dal primo round di annotazione otteniamo un file di nome maker.tar.gz che decomprimiamo con tar -z -xf. 
+Possiamo così lanciare i comandi: 
+
+```
+fasta_merge -d Anoste_rnd1_master_datastore_index.log
+gff3_merge -d Anoste_rnd1_master_datastore_index.log
+```
+
+Dopodiché possiamo lanciare due comandi (enviroment GAAS) ce ci permettono di ottenere informazioni riguardo i dati che abbiamo ottenuto tramite l'annotazione:
+
+```
+agat_sp_statistics.pl --gff Anoste_rnd1.all.gff -o Anoste_rnd1_model_stats.log
+agat_sq_repeats_analyzer.pl -i Anoste_rnd1.all.gff -o Anoste_rnd1_reapeats.log
+```
+
+__N.B.__(per il genome report --> con i risultati del secondo comando possiamo fare un pie chart per mostrare la distribuzione degli elementi ripetuti all'interno del genoma in analisi, mentre dal primo possiamo ricavare delle informazioni che possiamo anche comparare con altre annotazioni disponibili on line per capire la bontà della nostra analisi e anche le differenze esistenti) 
+
+Con il pacchetto di tool SNAP è possibile creare modelli di predizione di porzioni codificanti del genoma, sotto forma di file utilizzabili poi da maker. Vengono estratti i modelli con i primi tre comandi, creato il modello unico e impacchettati poi con forge e assemblati in un file hammer.   
+
+SNAP.sh :
+
+```
+maker2zff -c 0 -e 0 -l 80 -x 0.1 -d ../Anoste_rnd1_master_datastore_index.log #To extract gene models based on multiple filter criter>
+fathom genome.ann genome.dna -gene-stats > Anoste_rnd1_fathom.stats #Print some summary statistics of the selected gene models
+fathom genome.ann genome.dna -validate #Validate gene models and print summary statistics. Output is in stdout and cannot be redirect>
+fathom genome.ann genome.dna -categorize 1000 #Extract gene models together with 1000 bp at both ends for training
+fathom uni.ann uni.dna -export 1000 -plus #Export and convert unique genes to strand plus. Typically, only the unique genes are used >
+
+mkdir forge
+cd forge
+
+forge ../export.ann ../export.dna #call the parameter estimation program, better in another directory
+
+cd ..
+
+hmm-assembler.pl Anoste_rnd1 forge > Anoste_rnd1.hmm
+```
+
+
 
 
 
