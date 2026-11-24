@@ -62,6 +62,13 @@ nel primo round), in numero di CPU che mettiamo a disposizione nonché fornito l
 per riconoscere una proteina come tale, permettere l'alternative splicing ecc..). 
 
 
+GCF_016920785.2  Ixodes scapularis  Ixosca
+GCF_982258835.1  Parasteatoda tepidariorum  Partep
+GCF_031307605.1  Tribolium castaneum   Tricas
+GCF_000001215.4  Drosophila melanogaster  Dromel
+GCF_013141755.1  Anopheles stephensi   Anoste
+GCA_002082055.1  Hypsibius exemplaris  Hypexe
+
 
 
 
